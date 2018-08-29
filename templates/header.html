@@ -1,0 +1,17 @@
+<header>
+	<nav class="navbar navbar-default" style="background-color:#8B008B;">
+		<div class="container">
+			<div class="pull-left">                    
+				<a class="navbar-brand" href="{{url_for('showCatalog')}}" style="color:#F00;font-size:30px">
+<strong>					Tito Restaurant Catalog				</strong></a>
+			</div>
+			<div class="pull-right">
+				{% if 'username' not in session %}
+				<a href="{{url_for('showLogin')}}"><button type="button" class="btn btn-success" style="margin-top:8px;">Log In</button></a>
+				{% else %}
+				<a href="{{url_for('gdisconnect')}}"><button type="button" class="btn btn-success" style="margin-top:8px;">Logout</button></a>
+				{% endif %}
+			</div>
+		</div>
+	</nav>
+</header>
